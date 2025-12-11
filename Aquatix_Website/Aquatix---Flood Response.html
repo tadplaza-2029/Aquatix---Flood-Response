@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author1" content="Templado">
+		<meta name="author2" content="Villanueva">
+		<meta name="author3" content="Plaza">
+		<title>Aquatix - Flood Response</title>
+		
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@300;400;600;700&family=Nunito+Sans:wght@400;700&family=Kaushan+Script&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+		
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<style>
+			/* Base Settings */
+			body {
+				font-family: 'Inter', sans-serif;
+				background-color: #f4f4f9;
+				color: #333;
+				overflow-x: hidden;
+			}
+
+			/* Typography Mappings */
+			.font-script {
+				font-family: 'Kaushan Script', cursive; 
+			}
+			
+			.font-header {
+				font-family: 'Anton', sans-serif; 
+				letter-spacing: 0.05em;
+			}
+			
+			.font-avenir-alt {
+				font-family: 'Nunito Sans', sans-serif;
+			}
+
+			.font-dread {
+				font-family: 'Anton', sans-serif; 
+				letter-spacing: 0.1em;
+			}
+
+			/* Navbar Styling */
+			nav {
+				background-color: #0f3460;
+				transition: all 0.3s ease;
+			}
+
+			/* --- SECTION BACKGROUNDS --- */
+			
+			/* SECTION 1: HOME */
+			.hero-bg {
+				background-image: linear-gradient(rgba(15, 52, 96, 0.6), rgba(15, 52, 96, 0.6)), url('images/1.jpg');
+				background-size: cover;
+				background-position: center;
+				height: 100vh;
+			}
+
+			/* SECTION 2: ABOUT */
+			.about-bg {
+				background-image: linear-gradient(rgba(15, 52, 96, 0.85), rgba(15, 52, 96, 0.85)), url('images/4.jpg');
+				background-size: cover;
+				background-position: center;
+				color: white; /* Ensure text is readable */
+			}
+
+			/* SECTION 3: ARTICLES */
+			.articles-bg {
+				background-image: linear-gradient(rgba(244, 244, 249, 0.9), rgba(244, 244, 249, 0.9)), url('images/6.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+
+			/* SECTION 5: RESCUE TEAMS */
+			.rescue-bg {
+				background-image: linear-gradient(rgba(10, 30, 60, 0.9), rgba(10, 30, 60, 0.9)), url('images/5.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			
+			/* Text Effects */
+			.text-outline {
+				-webkit-text-stroke: 1px white;
+				color: transparent;
+			}
+			.text-shadow-hard {
+				text-shadow: 2px 2px 0px #000;
+			}
+
+			/* Card Styling */
+			.glass-card {
+				background: rgba(255, 255, 255, 0.95);
+				backdrop-filter: blur(10px);
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+			}
+
+			/* Link Hover Effects */
+			.nav-link {
+				position: relative;
+			}
+			.nav-link::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 2px;
+				bottom: -4px;
+				left: 0;
+				background-color: #fff;
+				transition: width 0.3s;
+			}
+			.nav-link:hover::after {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- Navigation -->
+		<nav class="fixed w-full z-50 text-white py-4 px-6 flex justify-between items-center shadow-lg">
+			<a href="#home" class="flex items-center gap-2 group">
+				<!-- AQUATIX LOGO -->
+				<img 
+					src="images/logo3.png" 
+					alt="Aquatix Logo" 
+					class="w-10 h-10 object-contain group-hover:opacity-80 transition filter drop-shadow-md"
+					onerror="this.onerror=null; this.src='https://placehold.co/40x40/0f3460/ffffff?text=AQ';"
+				>
+				<span class="font-header text-2xl tracking-wide">aquatix</span>
+			</a>
+
+			<div class="hidden md:flex gap-8 font-avenir-alt text-lg uppercase tracking-wider font-bold">
+				<a href="#home" class="nav-link">Home</a>
+				<a href="#about" class="nav-link">About</a>
+				<a href="#articles" class="nav-link">Articles</a>
+				<a href="#contact" class="nav-link">Contact</a>
+				<a href="#rescue" class="nav-link">Rescue Teams</a>
+				<a href="#related" class="nav-link">Related</a>
+			</div>
+
+			<button class="hover:text-blue-300">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+				</svg>
+			</button>
+		</nav>
+
+		<!-- SECTION 1: HOME -->
+		<section id="home" class="hero-bg flex flex-col justify-center items-center text-center relative px-4">
+			
+			<div class="z-10 mt-10">
+				<h1 class="text-7xl md:text-9xl text-white font-script mb-[-20px] drop-shadow-lg">
+					surging waves
+				</h1>
+				<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+					<span class="text-5xl md:text-7xl text-white font-header opacity-80">surging</span>
+					<span class="text-6xl md:text-8xl text-red-600 font-dread text-shadow-hard">DREAD</span>
+				</div>
+			</div>
+
+			<div class="absolute bottom-20 left-10 md:left-20">
+				<a href="https://newsinfo.inquirer.net/2136435/17-butuan-city-villages-flooded-as-uwan-moves-closer-to-land" target="_blank" class="text-white text-xl font-header border-b-2 border-white pb-1 hover:text-blue-300 hover:border-blue-300 transition flex items-center gap-2">
+					Read More <span class="text-2xl">→</span>
+				</a>
+			</div>
+
+			<div class="absolute bottom-5 left-10 md:left-20 flex gap-4 text-white">
+				<a href="https://www.instagram.com/butuancitypio/" target="_blank" class="hover:text-pink-500 transition">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+				</a>
+				<a href="https://www.facebook.com/butuancitypioofficial" target="_blank" class="hover:text-blue-500 transition flex items-center gap-2">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+					<span class="text-sm font-sans">Butuan City PIO</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- SECTION 2: ABOUT / ADVOCACY -->
+		<section id="about" class="py-16 about-bg border-b border-blue-600">
+			<div class="container mx-auto px-4 text-center max-w-4xl">
+				<!-- Ensure header stands out against dark overlay -->
+				<h2 class="text-4xl font-header text-yellow-400 mb-8 drop-shadow-lg">What we're raising advocacy for:</h2>
+				<div class="text-lg text-white leading-relaxed font-sans space-y-6 bg-black bg-opacity-30 p-6 rounded-lg shadow-xl">
+					<p>
+						Flooding remains a major threat to many communities, driven by factors such as heavy rainfall, inadequate drainage systems, deforestation, and improper waste disposal. These causes combine to overwhelm waterways and push floodwaters into homes and streets. Addressing these root issues through environmental protection and infrastructure improvement is essential to reducing long-term risks.
+					</p>
+					<p>
+						Communities, schools, and local governments must collaborate to strengthen preparedness and resilience. By investing in early-warning systems, proper urban planning, and public education on flood risks, we help people respond effectively to these recurring hazards. A unified commitment to mitigation and preparedness safeguards vulnerable populations and ensures a safer, more resilient future for all.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 3: ARTICLES -->
+		<section id="articles" class="py-20 articles-bg relative overflow-hidden">
+			
+			<div class="absolute top-0 left-0 w-full h-64 bg-blue-900 z-0 opacity-80"></div>
+
+			<div class="container mx-auto px-4 relative z-10">
+				
+				<!-- Article 1 Card -->
+				<div class="glass-card p-8 mb-12 flex flex-col md:flex-row gap-8 items-center border-l-8 border-blue-500">
+					
+					<div class="md:w-1/2">
+						<h3 class="text-2xl font-bold text-gray-500 mb-2 uppercase tracking-widest">Article 1</h3>
+						<h2 class="text-4xl font-header text-blue-900 mb-4 leading-tight">
+							Strengthening Flood Control Infrastructure in <span class="text-blue-600">Butuan City</span>
+						</h2>
+						
+						<p class="mb-4 text-gray-700 leading-relaxed">
+							Butuan City can lessen flooding by improving structural defenses such as river dikes, floodwalls, and drainage systems, along with adding pumping stations in low-lying areas. Regular de-silting of waterways and maintenance of drainage canals ensure that water flows properly during heavy rainfall.
+						</p>
+						
+						<!-- QUOTE -->
+						<blockquote class="border-l-4 border-blue-400 pl-4 my-4 italic text-gray-600 bg-blue-50 p-4 rounded-r-lg">
+							"Ang pagpatuman sa Urban Drainage Project sa dakbayan sa Butuan kay aron makabaton ang syudad sa limpyo ug hapsay nga kadalanan ug dili na masinati ang pagbaha sa kadalanan labi na kung sunod-sunod ang pagbundak sa kusog nga ulan."
+						</blockquote>
+
+						<p class="text-gray-700 leading-relaxed">
+							Nature-based solutions can further support these engineering measures. Retention basins, rainwater harvesting, expanded green spaces, and restored riparian buffers help slow runoff and prevent river swelling. Coordinated efforts from local authorities and communities make these strategies more effective.
+						</p>
+					</div>
+
+					<div class="md:w-1/2 relative">
+						<div class="relative bg-gray-200 h-64 w-full rounded-lg overflow-hidden mb-4">
+							<img src="images/2.jpg" alt="Mayor Speaking" class="w-full h-full object-cover">
+							<div class="absolute bottom-0 right-0 bg-blue-900 text-white p-2 text-xs">
+								- Mayor Ronnie Vicente C. Lagnada
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Article 2 Card -->
+				<div class="glass-card p-8 flex flex-col md:flex-row-reverse gap-8 items-center border-r-8 border-blue-400 mt-10">
+					<div class="md:w-1/2">
+						<h3 class="text-2xl font-bold text-gray-500 mb-2 uppercase tracking-widest">Article 2</h3>
+						 <h2 class="text-4xl font-header text-blue-900 mb-4 leading-tight">
+							Environmental and Community-Based <span class="text-blue-600">Strategies</span>
+						</h2>
+						<p class="mb-4 text-gray-700 leading-relaxed">
+							Protecting the Agusan Marsh, watersheds, and upstream forests reduces runoff and enhances natural water absorption. Regulating logging, mining, and land conversion helps preserve forest cover and maintain ecological stability.
+						</p>
+						<p class="text-gray-700 leading-relaxed">
+							Community participation also strengthens flood resilience. Early warning systems, disaster training, evacuation planning, and household flood-proofing help residents prepare for flood events. These efforts, supported by good governance and regular monitoring, improve Butuan City's ability to adapt to recurring floods.
+						</p>
+					</div>
+					<div class="md:w-1/2 h-64 bg-gray-200 rounded-lg overflow-hidden">
+						<img src="images/3.jpg" alt="Flood Scene" class="w-full h-full object-cover">
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- SECTION 4: CONTACT -->
+		<section id="contact" class="py-20 bg-blue-300">
+			<div class="container mx-auto px-4">
+				<h2 class="bg-white inline-block px-4 py-2 text-4xl font-header italic transform -rotate-2 mb-8 shadow-lg">CONTACT:</h2>
+				
+				<div class="bg-blue-400 p-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center justify-between">
+					<div class="text-white space-y-4">
+						<h3 class="text-2xl font-bold font-header">Name: YOUNG Agusan del Norte Emergency Response Team</h3>
+						<p class="text-4xl font-bold">Contact number: <span class="font-mono">0977 688 2120</span></p>
+						<p class="text-2xl italic">Email address: <a href="mailto:youngadnertfederation@gmail.com" class="underline hover:text-blue-100">youngadnertfederation@gmail.com</a></p>
+					</div>
+					
+					<div class="w-48 h-48 bg-white rounded-full border-4 border-red-600 flex items-center justify-center mt-6 md:mt-0 shadow-lg overflow-hidden">
+						 <!-- YOUNG Agusan del Norte Emergency Response Team Logo -->
+						 <img 
+							 src="images/logo_young.png" 
+							 alt="YOUNG ADNER Team Logo" 
+							 class="w-full h-full object-contain"
+							 onerror="this.onerror=null; this.src='https://placehold.co/192x192/4a90e2/ffffff?text=Y.E.R.T';"
+						 >
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 5: RESCUE TEAMS -->
+		<section id="rescue" class="py-20 text-white rescue-bg">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-header mb-12 text-center border-b border-gray-600 pb-4">Rescue Units</h2>
+				
+				<div class="grid md:grid-cols-2 gap-12">
+					<div class="flex flex-col items-center text-center">
+						<h3 class="text-2xl font-bold mb-4">Butuan Search and Rescue Team</h3>
+						<div class="w-40 h-40 bg-yellow-400 rounded-full flex items-center justify-center text-blue-900 font-bold mb-4 shadow-lg border-4 border-red-500 overflow-hidden">
+							 <!-- Rescue Team 1 Logo -->
+							 <img src="images/logo1.png" alt="Rescue Team 1 Logo" class="w-full h-full object-cover">
+						</div>
+						<p class="text-xl">Contact number:</p>
+						<p class="text-3xl font-bold text-yellow-400">0921-768-7287 / 0951-387-7123</p>
+					</div>
+
+					<div class="flex flex-col items-center text-center">
+						<h3 class="text-2xl font-bold mb-4">Butuan Bureau of Fire Protection</h3>
+						<div class="w-40 h-40 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold mb-4 shadow-lg border-4 border-yellow-500 overflow-hidden">
+							 <!-- Rescue Team 2 Logo -->
+							 <img src="images/logo2.png" alt="BFP Logo" class="w-full h-full object-cover">
+						</div>
+						<p class="text-xl">Contact number:</p>
+						<p class="text-3xl font-bold text-yellow-400">0931-721-8882</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 6: RELATED WEBSITES -->
+		<section id="related" class="py-20 bg-gray-100">
+			<div class="container mx-auto px-4">
+				<div class="flex justify-between items-end mb-8 border-b-2 border-blue-900 pb-2">
+					<h2 class="text-5xl font-header bg-blue-900 text-white px-4 py-2 inline-block">News</h2>
+					<h2 class="text-5xl font-header bg-blue-900 text-white px-4 py-2 inline-block">Statistics</h2>
+				</div>
+
+				<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+					
+					<!-- INQUIRER LOGO -->
+					<a href="https://newsinfo.inquirer.net" target="_blank" class="group flex flex-col items-center">
+						<div class="w-full aspect-square flex items-center justify-center bg-white p-2 rounded-lg shadow-md border border-gray-200 group-hover:shadow-lg transition">
+							<img src="images/logo_inquirer.png" alt="Inquirer Logo" class="w-4/5 h-4/5 object-contain">
+						</div>
+						<span class="mt-2 font-bold text-gray-700 group-hover:text-blue-600">Inquirer Net</span>
+					</a>
+
+					<!-- MINDANEWS LOGO -->
+					<a href="https://mindanews.com" target="_blank" class="group flex flex-col items-center">
+						<div class="w-full aspect-square flex items-center justify-center bg-white p-2 rounded-lg shadow-md border border-gray-200 group-hover:shadow-lg transition">
+							 <img src="images/logo_mindanews.png" alt="MindaNews Logo" class="w-4/5 h-4/5 object-contain">
+						</div>
+						<span class="mt-2 font-bold text-gray-700 group-hover:text-green-800">MindaNews</span>
+					</a>
+
+					<!-- PIA LOGO -->
+					<a href="https://pia.gov.ph" target="_blank" class="group flex flex-col items-center">
+						<div class="w-full aspect-square flex items-center justify-center bg-white p-2 rounded-lg shadow-md border border-gray-200 group-hover:shadow-lg transition">
+							 <img src="images/logo_pia.png" alt="PIA Logo" class="w-4/5 h-4/5 object-contain">
+						</div>
+						<span class="mt-2 font-bold text-gray-700 group-hover:text-blue-900">PIA</span>
+					</a>
+
+					<!-- PHILATLAS LOGO -->
+					<a href="https://www.philatlas.com" target="_blank" class="group flex flex-col items-center">
+						<div class="w-full aspect-square flex items-center justify-center bg-white p-2 rounded-lg shadow-md border border-gray-200 group-hover:shadow-lg transition">
+							 <img src="images/logo_philatlas.png" alt="PhilAtlas Logo" class="w-4/5 h-4/5 object-contain">
+						</div>
+						<span class="mt-2 font-bold text-gray-700 group-hover:text-red-600">PhilAtlas</span>
+					</a>
+
+					<!-- PAGASA LOGO -->
+					<a href="https://bagong.pagasa.dost.gov.ph" target="_blank" class="group flex flex-col items-center">
+						<div class="w-full aspect-square flex items-center justify-center bg-white p-2 rounded-lg shadow-md border border-gray-200 group-hover:shadow-lg transition">
+							 <img src="images/logo_pagasa.png" alt="PAGASA Logo" class="w-4/5 h-4/5 object-contain">
+						</div>
+						<span class="mt-2 font-bold text-gray-700 group-hover:text-blue-500">PAGASA</span>
+					</a>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-blue-900 text-white py-6 text-center text-sm">
+			<p>&copy; 2025 Aquatix Flood Response. All rights reserved.</p>
+		</footer>
+
+	</body>
+	</html>
